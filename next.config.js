@@ -64,6 +64,11 @@ const nextConfig = {
         source: '/api/:path*',
         destination: 'http://localhost:3001/api/v1/:path*',
       },
+      {
+        // Add this new rewrite rule for Greenhouse API
+        source: '/greenhouse/:path*',
+        destination: 'https://harvest.greenhouse.io/v1/:path*'
+      }
     ];
   },
   poweredByHeader: false,
